@@ -1,0 +1,40 @@
+//
+//  HWSDK-Prefix.pch
+//  HWSDK Framework
+//
+//  Prefix header for HWSDK
+//
+
+#ifndef HWSDK_Prefix_pch
+#define HWSDK_Prefix_pch
+
+// 用户头文件已移除，避免混淆问题
+// 每个文件自行导入需要的头文件
+// #import "Masonry.h"
+// #import "HWSDKMethodTest.h"
+// #import "MBProgressHUD+NJ.h"
+// #import "RXDLD_SdkTool.h"
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+// HWSDK common definitions
+#define HWSDK_VERSION_MAJOR 1
+#define HWSDK_VERSION_MINOR 0
+#define HWSDK_VERSION_PATCH 0
+
+// HWSDK build configuration
+#ifdef DEBUG
+    #define HWSDK_LOG_ENABLED 1
+    #define HWSDK_DLog(fmt, ...) NSLog(@"[HWSDK DEBUG] " fmt, ##__VA_ARGS__)
+#else
+    #define HWSDK_LOG_ENABLED 0
+    #define HWSDK_DLog(...)
+#endif
+
+// HWSDK error handling
+#define HWSDK_SAFE_BLOCK(block) if(block) block()
+
+#endif /* HWSDK_Prefix_pch */

@@ -1,0 +1,44 @@
+# Build directories
+build/
+*.o
+*.a
+*.dylib
+ios-obfuscator
+
+# Test outputs
+tests/output/
+tests/HWSDK/HWSDK.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+obfuscator.log
+
+# Mapping files (optional - uncomment if you don't want to track them)
+# mapping.json

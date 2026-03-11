@@ -1,0 +1,93 @@
+{
+  "sdk": {
+    "name": "HWSDK",
+    "type": "framework",
+    "inputPath": "/Users/liang/Downloads/cursor/HWSDK",
+    "outputPath": "/Users/liang/Downloads/cursor/ios-obfuscator/HWSDK_obfuscated"
+  },
+  "obfuscation": {
+    "strategies": [
+      "ClassNameObfuscation",
+      "PropertyNameObfuscation",
+      "MethodNameObfuscation",
+      "VariableNameObfuscation",
+      "CommentRemoval",
+      "FolderNameObfuscation",
+      "SDKNameObfuscation",
+      "DeadCodeInjection"
+    ],
+    "namingRule": {
+      "style": "words",
+      "prefix": "",
+      "wordListPath": "/Users/liang/Downloads/cursor/ios-obfuscator/wordlist",
+      "wordCase": "camelCase",
+      "wordCount": {
+        "className": {
+          "min": 2,
+          "max": 3
+        },
+        "methodName": {
+          "min": 2,
+          "max": 3
+        },
+        "propertyName": {
+          "min": 2,
+          "max": 3
+        },
+        "fileName": {
+          "min": 2,
+          "max": 3
+        },
+        "folderName": {
+          "min": 2,
+          "max": 4
+        },
+        "parameterName": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      "randomLength": {
+        "className": {
+          "min": 6,
+          "max": 12
+        },
+        "methodName": {
+          "min": 6,
+          "max": 12
+        },
+        "propertyName": {
+          "min": 6,
+          "max": 12
+        },
+        "fileName": {
+          "min": 8,
+          "max": 16
+        },
+        "folderName": {
+          "min": 8,
+          "max": 16
+        },
+        "parameterName": {
+          "min": 4,
+          "max": 8
+        }
+      }
+    },
+    "whitelist": {
+      "classes": ["NSObject"],
+      "methods": ["init", "viewDidLoad", "dealloc","resignFirstResponder","reloadInputViews","dataTaskWithRequest:completionHandler:","hitTest:withEvent:","pointInside:withEvent:"],
+      "properties": ["delegate", "dataSource","enable"],
+      "variables": ["bezel", "testVar"],
+      "thirdPartySDKs": [],
+      "publicHeaders": ["FusionInitRequestModel.h","FusionLoginModel.h","FusionManager.h","FusionOrderRequestModel.h","FusionReportRequestModel.h"]
+    },
+    "deadCodeInjection": {
+      "density": 0.2,
+      "maxStatementsPerMethod": 10,
+      "templateTypes": []
+    },
+    "generateMapping": true,
+    "mappingOutputPath": "./mapping.json"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "sdk": {
+    "name": "HWSDK",
+    "type": "framework",
+    "inputPath": "/Users/liang/Downloads/cursor/ios-obfuscator/tests/HWSDK",
+    "outputPath": "/Users/liang/Downloads/cursor/ios-obfuscator/tests/output/DeadCodeInjection-1773212392"
+  },
+  "obfuscation": {
+    "strategies": ["DeadCodeInjection"],
+    "namingRule": {
+      "style": "random",
+      "prefix": "obf_",
+      "wordListPath": "/Users/liang/Downloads/cursor/ios-obfuscator/wordlist",
+      "wordCase": "camelCase",
+      "randomLength": {
+        "className": {"min": 6, "max": 10},
+        "methodName": {"min": 6, "max": 10},
+        "propertyName": {"min": 6, "max": 10},
+        "fileName": {"min": 6, "max": 10},
+        "folderName": {"min": 6, "max": 10}
+      }
+    },
+    "whitelist": {
+      "classes": ["NSObject"],
+      "methods": ["init", "viewDidLoad", "dealloc"],
+      "properties": [],
+      "thirdPartySDKs": []
+    },
+    "deadCodeInjection": {
+      "density": 0.5,
+      "maxStatementsPerMethod": 3,
+      "templateTypes": []
+    },
+    "generateMapping": true,
+    "mappingOutputPath": "/Users/liang/Downloads/cursor/ios-obfuscator/tests/output/DeadCodeInjection-1773211570/mapping.json"
+  }
+}
